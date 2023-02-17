@@ -1,4 +1,5 @@
-module DSPMAC(
+#Macro: Adder/Multiplier/Accumulator
+module DSPADDMAC(
 output PRODUCT,
 input CARRYIN, 
 input CLK,

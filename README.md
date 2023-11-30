@@ -10,5 +10,6 @@ carry4 | carry element
 BRAM_SDP | BRAM simple dual port
 DSP_ADD_MAC | DSP Adder/Multiplier/Accumulator
 RAM | allot memory in slice M
-
+in_fifo | input FIFO
+out_fifo | output FIFO
 

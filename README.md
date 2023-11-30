@@ -12,4 +12,4 @@ DSP_ADD_MAC | DSP Adder/Multiplier/Accumulator
 RAM | allot memory in slice M
 in_fifo | input FIFO
 out_fifo | output FIFO
-
+XADC | ADC

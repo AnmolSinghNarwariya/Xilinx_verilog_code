@@ -1,5 +1,7 @@
-module fifo(input D0, input D1, input D2, input D3, input D4, input D5, input D6, input D7, input D8, input D9, input RDCLK, input RDEN, input RESET, input WRCLK, input WREN, output  ALMOSTEMPTY, output ALMOSTFULL, output EMPTY, output FULL, output Q0, output Q1, output Q2, output Q3, output Q4, output Q5, output Q6, output Q7, output Q8, output Q9 );
-
+module in_fifo(input RDCLK,input RDEN,input RESET,input WRCLK,input WREN,
+input [3:0] D0,input [3:0] D1,input [3:0] D2,input [3:0] D3,input [3:0] D4,input [7:0] D5,input [7:0] D6,input [3:0] D7,input [3:0] D8,input [3:0] D9,
+output [7:0] Q0,output [7:0] Q1,output [7:0] Q2,output [7:0] Q3,output [7:0] Q4,output [7:0] Q5,output [7:0] Q6,output [7:0] Q7,output [7:0] Q8,output [7:0] Q9,
+output ALMOSTEMPTY, output ALMOSTFULL, output EMPTY, output FULL);
 IN_FIFO #(
    .ALMOST_EMPTY_VALUE(1),          // Almost empty offset (1-2)
    .ALMOST_FULL_VALUE(1),           // Almost full offset (1-2)

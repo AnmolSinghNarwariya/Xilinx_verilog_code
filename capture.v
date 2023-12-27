@@ -1,4 +1,4 @@
-module capture(input CAp, input CLK);
+module capture(input CAP, input CLK);
 CAPTUREE2 #(
    .ONESHOT("TRUE")  // Specifies the procedure for performing single readback per CAP trigger.
 )

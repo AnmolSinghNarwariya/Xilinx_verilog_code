@@ -13,3 +13,4 @@ RAM | allot memory in slice M
 in_fifo | input FIFO
 out_fifo | output FIFO
 XADC | ADC
+ALUT_2 | two output LUT

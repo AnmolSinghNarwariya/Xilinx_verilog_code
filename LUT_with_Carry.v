@@ -1,21 +1,24 @@
 module top(a,b,c,d,e,f,CI,CO,O,CI1,CO1,O1);
 input a,b,c,d,e,f;
 //output wire g,h;
-wire g,h,j,k,l,m,n,o;
-wire [1:0] DI,S,DI1,S1;
-output [1:0] CO;
-output [1:0] O; 
-input [1:0] CI;
-output [1:0] CO1;
-output [1:0]  O1; 
-input [1:0] CI1; 
+wire g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w;
+wire [3:0] DI,S,DI1,S1;
+output [3:0] CO;
+output [3:0] O; 
+input  CI;
+output [3:0] CO1;
+output [3:0]  O1; 
+input  CI1; 
 
 LUT_A2 A1(a,b,c,d,e,f,g,h);
 LUT_A2 A2(a,b,c,d,e,f,j,k);
 LUT_A2 A3(a,b,c,d,e,f,l,m);
 LUT_A2 A4(a,b,c,d,e,f,n,o);
 
-
+LUT_A2 A5(a,b,c,d,e,f,p,q);
+LUT_A2 A6(a,b,c,d,e,f,r,s);
+LUT_A2 A7(a,b,c,d,e,f,t,u);
+LUT_A2 A8(a,b,c,d,e,f,v,w);
 
 assign DI[0]=g;
 assign S[0]=h;
@@ -26,6 +29,17 @@ assign DI[1]=l;
 assign S[1]=m;
 assign DI1[1]=n;
 assign S1[1]=o;
+
+assign DI[2]=p;
+assign S[2]=q;
+assign DI1[2]=r;
+assign S1[2]=s;
+
+assign DI[3]=t;
+assign S[3]=u;
+assign DI1[3]=v;
+assign S1[3]=w;
+
 //assign DI[0]=j;
 //assign S[0]=k;
 //assign DI[2]=l;
@@ -52,12 +66,12 @@ LUT5 #(.INIT(32'h2549))
 endmodule
 
 module carry4(
-output [1:0] CO,
-output [1:0] O, 
-input [1:0] CI,
+output [3:0] CO,
+output [3:0] O, 
+input CI,
  
-input  [1:0] DI,
-input [1:0] S
+input  [3:0] DI,
+input [3:0] S
 );
 
 parameter CYINIT=0;
